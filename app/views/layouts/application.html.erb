@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AlphaBlog</title>
+    <title>Nepgramm</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,10 +9,32 @@
   </head>
 
   <body>
-      <% flash.each do |name, msg|  %>
-      <%=content_tag :div, msg, class: "alert alert-info" %>  
-      <% end %>
-      <%= yield %>
-     
+  <ul class="nav navbar-inverse">
+    <div class="container">
+      <div class= "navbar-brand"><%= link_to "Nepagramm", root_path %>
+        <% if user_signed_in? %>
+            <ul class="nav navbar-nav navbar-left">
+             <li><%= link_to "Gram It!", new_pic_path %></li>
+              <li><%= link_to "Settings", edit_user_registration_path %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li> 
+             </ul>   
+          <% else %>
+
+               <ul class="nav navbar-nav navbar-left">
+                  <li><%= link_to "Join", new_user_registration_path %></li>
+                  <li><%= link_to "Log In", new_user_session_path %></li> 
+                </ul>
+                <% end %>
+        </div>
+    </div>
+  </ul>
+
+
+      <div clas="container">
+          <% flash.each do |name, msg|  %>
+          <%=content_tag :div, msg, class: "alert alert-info" %>  
+          <% end %>
+          <%= yield %>
+      </div>
   </body>
 </html>
