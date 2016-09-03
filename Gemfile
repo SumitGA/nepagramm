@@ -30,6 +30,8 @@ gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'devise', '~> 4.2'
 #using the paper clip gem for adding pictures
 gem 'paperclip', '~> 4.2.0'
+#adding jquery gem to style the index page
+gem 'masonry-rails',  '~> 0.2.1'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
