@@ -32,6 +32,8 @@ gem 'devise', '~> 4.2'
 gem 'paperclip', '~> 4.2.0'
 #adding jquery gem to style the index page
 gem 'masonry-rails',  '~> 0.2.1'
+#adding gem for getting like buttons to the page
+gem 'acts_as_votable', '~> 0.10.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
