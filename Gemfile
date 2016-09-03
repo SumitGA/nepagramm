@@ -28,6 +28,8 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'bootstrap-sass', '~> 3.2.0.2'
 #using devise gem for user registration 
 gem 'devise', '~> 4.2'
+#using the paper clip gem for adding pictures
+gem 'paperclip', '~> 4.2.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
