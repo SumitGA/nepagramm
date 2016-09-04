@@ -11,10 +11,11 @@
   <body>
   <nav class="navbar navbar-inverse">
     <div class="container">
-      <div class= "navbar-brand"><%= link_to "Nepagramm", root_path %>
-        </div>
+      <div class= "navbar-brand">
+          <%= link_to "Nepagramm", root_path %>
+      </div>
         <% if user_signed_in? %>
-          <ul class="nav navbar-nav navbar-left">
+          <ul class=" nav navbar-nav navbar-left">
              <li><%= link_to "Gram It!", new_pic_path %></li>
               <li><%= link_to "Settings", edit_user_registration_path %></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li> 
@@ -38,5 +39,12 @@
           <% end %>
           <%= yield %>
       </div>
+      <div class="container"> 
+          <div class="page-footer">
+              <p>&copy; Nepagramm. All Rights Reserved!
+              </p>
+            </div>
+      </div>
+      
   </body>
 </html>
